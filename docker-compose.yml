@@ -1,0 +1,24 @@
+name: skelbot
+
+services:
+  skelbot:
+    build: .
+    image: skelbot
+    container_name: skelbot
+    env_file: .env
+    init: true
+    restart: on-failure
+    stop_grace_period: 60s
+    ports:
+      - "${UI_BIND_IP:-127.0.0.1}:${UI_PORT:-3000}:3000"
+    environment:
+      UI_PORT: 3000
+      UI_HOST: 0.0.0.0
+      UI_ALLOWED_HOSTS: ${UI_ALLOWED_HOSTS:-}
+    volumes:
+      - minecraft-auth:/home/node/.minecraft
+      - bot-data:/app/data
+
+volumes:
+  minecraft-auth:
+  bot-data:

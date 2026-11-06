@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.env
+.git
+Dockerfile
+docker-compose.yml
+.dockerignore
+README.md
+LICENSE
+data
+src/frontend/dist

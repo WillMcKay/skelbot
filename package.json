@@ -1,0 +1,46 @@
+{
+  "name": "skelbot",
+  "private": true,
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "node index.js",
+    "build": "vite build --config src/frontend/vite.config.mjs",
+    "dev:ui": "vite --config src/frontend/vite.config.mjs",
+    "bot": "node src/backend/worker.js",
+    "test": "node --test \"src/**/*.test.js\""
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@usespaceui/squishmoji": "^0.1.0",
+    "dotenv": "^18.0.9",
+    "minecraft-folder-path": "^1.2.0",
+    "mineflayer": "https://codeload.github.com/GenerelSchwerz/mineflayer/tar.gz/1ac4a5bfaf37317616d6f367c31d78c11e34ee2b",
+    "prismarine-auth": "^2.7.0",
+    "prismarine-physics": "^1.11.1",
+    "socks": "^2.8.10",
+    "uuid-1345": "^1.0.2",
+    "vec3": "^0.1.10"
+  },
+  "devDependencies": {
+    "@base-ui/react": "^1.9.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@tailwindcss/vite": "^4.3.4",
+    "@vitejs/plugin-react": "^6.2.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "d3-scale": "^4.0.3",
+    "d3-shape": "^3.2.1",
+    "lucide-react": "^1.70.0",
+    "motion": "^14.9.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "shadcn": "^4.23.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.4",
+    "tw-animate-css": "^1.4.0",
+    "vite": "^8.3.5"
+  }
+}
